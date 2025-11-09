@@ -8,7 +8,6 @@ AturUang merupakan sebuah website edukasi manajemen keuangan dan smart budgeting
 - Visualisasi data dan rekomendasi sebagai hasil akhir
 
 ## Pengembangan
-Ikuti langkah-langkah berikut untuk menjalankan website di laptop Anda:
 ### Persyaratan
 - Laptop
 - Koneksi Internet
