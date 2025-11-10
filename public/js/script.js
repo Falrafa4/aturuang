@@ -33,6 +33,27 @@ $(document).ready(function () {
         $(this).addClass('active');
       }
     });
+
+    const toggleBtn = $('#toggleMenu');
+    const mobileMenu = $('#mobileMenu');
+    const icon = $('#icon');
+
+    let isOpen = false;
+
+    toggleBtn.on('click', function () {
+      if (!isOpen) {
+        mobileMenu.removeClass('-translate-y-[130%]');
+        mobileMenu.addClass('translate-y-0');
+        icon.text('close');
+        isOpen = true;
+      } 
+      else {
+        mobileMenu.removeClass('translate-y-0');
+        mobileMenu.addClass('-translate-y-[130%]');
+        icon.text('menu');
+        isOpen = false;
+      }
+    });
   });
 
   $('#footer').load('/components/footer.html', function () {
