@@ -1,3 +1,5 @@
 wajib
 npm install
-npx serve
+
+[npm run dev
+npx serve public] secara bersamaan jika untuk development

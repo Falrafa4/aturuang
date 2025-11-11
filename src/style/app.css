@@ -1,35 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #1E3A8A;
-    --color-secondary: #F3F4F6;
-    --font-default: "Alexandria", sans-serif;
+  --color-primary: #1e3a8a;
+  --color-secondary: #f3f4f6;
+  --font-default: "Alexandria", sans-serif;
 }
 
 * {
-    @apply box-border;
+  @apply box-border;
 }
 
 .card {
-    @apply flex flex-col justify-center items-center shadow-lg;
+  @apply flex flex-col justify-center items-center shadow-lg;
 }
 
 .nav-link {
-    @apply opacity-70 hover:opacity-100 transition-all;
+  @apply opacity-70 hover:opacity-100 transition-all;
 }
 
 .nav-link.active {
-    @apply opacity-100;
+  @apply opacity-100;
 }
 
 p {
-    @apply leading-[180%]
+  @apply leading-[180%];
 }
 
+.font-bold-custom {
+  color: #1e3a8a;
+  font-family: Alexandria;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
 .btn-primary {
-    @apply bg-primary text-white px-15 py-4 flex items-center content-center border border-primary rounded-full w-fit mt-6 hover:bg-secondary hover:text-primary hover:border hover:border-primary transition-all duration-300 ease-in-out !important;
+  @apply bg-primary text-white px-15 py-4 flex items-center content-center border border-primary rounded-full w-fit mt-6 hover:bg-secondary hover:text-primary hover:border hover:border-primary transition-all duration-300 cursor-pointer ease-in-out;
 }
 
 .btn-primary-alternate {
-    @apply bg-transparent text-primary px-15 py-4 flex items-center content-center border border-primary rounded-full w-fit mt-6 hover:bg-primary hover:text-white hover:border hover:border-primary transition-all duration-300 ease-in-out;
+  @apply bg-transparent text-primary px-15 py-4 flex items-center content-center border border-primary rounded-full w-fit mt-6 hover:bg-primary hover:text-white hover:border hover:border-primary transition-all duration-300 cursor-pointer ease-in-out;
 }
