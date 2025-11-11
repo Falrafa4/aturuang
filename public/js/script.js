@@ -33,6 +33,50 @@ $(document).ready(function () {
         $(this).addClass('active');
       }
     });
+
+    // fungsionalitas tombol toggle menu mobile
+    const toggleBtn = $('#toggleMenu');
+    const mobileMenu = $('#mobileMenu');
+    const icon = $('#icon');
+
+    let isOpen = false;
+
+    toggleBtn.on('click', function () {
+      if (!isOpen) {
+        mobileMenu.removeClass('-translate-y-[130%]');
+        mobileMenu.addClass('translate-y-0');
+        icon.text('close');
+        isOpen = true;
+      }
+      else {
+        mobileMenu.removeClass('translate-y-0');
+        mobileMenu.addClass('-translate-y-[130%]');
+        icon.text('menu');
+        isOpen = false;
+      }
+    });
+
+    // khusus halaman artikel (ubah warna navbar saat scroll)
+    if ($('body').attr('id') === 'artikelPage') {
+      // ubah warna navbar
+      $('#navbar').removeClass('text-primary bg-secondary').addClass('text-secondary bg-transparent');
+
+      $(window).on('scroll', function () {
+          const scroll = $(this).scrollTop();
+          const navbar = $('#navbar');
+          const headerHeight = $('header').outerHeight();
+
+          $(window).on('scroll', function () {
+            if (scroll > headerHeight - 50) {
+              // udah lewatin header
+              navbar.removeClass('text-secondary bg-transparent').addClass('text-primary bg-secondary');
+            } else {
+              // masih di atas
+              navbar.removeClass('text-primary bg-secondary').addClass('text-secondary bg-transparent');
+            }
+          });
+      });
+    }
   });
 
   $('#footer').load('/components/footer.html', function () {

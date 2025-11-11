@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AturUang</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <!-- jQuery -->
+    <script src="/js/jquery-3.7.1.js"></script>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="font-default font-light text-primary bg-secondary w-full" id="artikelPage">
+    <!-- navbar 🐧 -->
+    <div id="navBar"></div>
+    <!-- navbar end 🐧 -->
+
+    <!-- main section 🐧-->
+    <main class="lg:overflow-x-hidden">
+        <!-- header/judul artikel -->
+        <header class="flex flex-col bg-primary text-secondary items-start justify-center gap-6 px-8 pt-22 pb-10 lg:px-30 lg:pt-40 lg:pb-20" data-aos="fade-in">
+            <h1 class="font-light text-2xl lg:text-4xl leading-[120%]" data-aos="fade-down" data-aos-delay="200">Ini Adalah Judul Dari Artikel Pertama Beserta Perubahannya</h1>
+            <div class="flex gap-10 lg:gap-15">
+                <p data-aos="fade-down" data-aos-delay="100">9 November 2025</p>
+                <p data-aos="fade-down" data-aos-delay="150">Oleh: Admin</p>
+            </div>
+        </header>
+        <!-- header/judul artikel end -->
+
+        <section class="flex flex-col lg:flex-row px-8 py-10 gap-20 lg:px-30 lg:py-25 text-black w-screen overflow-x-hidden">
+            <!-- isi artikel -->
+            <article class="flex-3 flex flex-col gap-7">
+                <img src="/img/artikel/artikel1.jpg" alt="Artikel 1" data-aos="fade-right">
+                <a href="https://www.freepik.com">Sumber: Freepik</a>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare rutrum tortor, eget cursus mauris iaculis vel. Donec quis eros vel augue ultricies ultrices. Integer suscipit erat at augue laoreet, vitae suscipit massa facilisis. Mauris malesuada sed purus vitae dignissim. Nullam sagittis augue vel velit tempus, a elementum ante aliquam. Nullam mattis, sem vitae consequat blandit, odio massa mattis libero, rutrum porttitor nunc ex et urna. Donec vel enim tristique, varius tortor eu, faucibus enim. Aenean non posuere sem, et tempor turpis. Suspendisse lacinia felis in quam scelerisque, non porttitor diam semper. Suspendisse est lorem, gravida in cursus viverra, fringilla non tellus. Phasellus sed malesuada elit. Morbi consectetur vel justo sit amet rhoncus. Nunc et sem sed lectus lobortis bibendum quis ut dolor. Nam iaculis molestie justo, eget dictum augue porta eget. Duis ut nisi odio.
+                </p>
+                <p>
+                    Ut dolor diam, laoreet in cursus in, sodales et libero. Proin ut semper ipsum. Pellentesque eu augue sodales, pharetra lectus in, varius elit. Nunc tincidunt libero orci, nec dictum erat pretium eget. Aenean nec turpis sit amet nisi iaculis bibendum. Morbi venenatis nisl et augue consequat semper. Nam eros elit, vestibulum in turpis eu, tempor cursus elit.
+                </p>
+                <p>
+                    Ut tempor eget magna eu faucibus. Maecenas tristique lacus dui, eget vehicula eros luctus a. Praesent libero nulla, viverra quis lectus in, egestas iaculis metus. Nam vitae enim felis. Morbi eu dolor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque a orci sed ex mattis fringilla ut sed ex. Nam faucibus gravida nulla ac mollis.
+                </p>
+                <p>
+                    Maecenas ultrices justo sagittis dui lacinia, et volutpat ex dignissim. Integer quis augue quis mauris vestibulum maximus. Fusce quis pellentesque erat. Quisque sed efficitur mauris. Suspendisse eu orci dui. Integer bibendum rutrum libero venenatis hendrerit. Aenean tincidunt varius aliquet. Etiam ac fermentum metus.
+                </p>
+                <p>
+                    Proin vitae lacus leo. Etiam id dolor non leo viverra facilisis. Proin sollicitudin vel purus at hendrerit. Nulla iaculis turpis venenatis dui placerat, sed semper justo eleifend. Duis fringilla tellus non tellus pretium, ut tincidunt lacus sollicitudin. Aliquam malesuada turpis eu dolor bibendum faucibus. Sed quam quam, accumsan vel luctus ac, semper id purus. Morbi blandit enim dictum imperdiet vehicula. Morbi elit mauris, molestie sagittis vestibulum commodo, auctor sit amet ante. Donec bibendum erat a purus aliquet pellentesque. Cras ut enim non mauris maximus pellentesque vel vel augue.
+                </p>
+            </article>
+            <!-- isi artikel end -->
+
+            <!-- artikel terkini -->
+            <section class="artikel-terkini flex-1">
+                <h1 class="text-3xl mb-6" data-aos="fade-left">Artikel Terkini</h1>
+                <div class="flex flex-col gap-5">
+                    <a href="/artikel/artikel-1/" class="article-card" data-aos="fade-left" data-aos-delay="100">
+                        <img class="w-full max-h-50 object-cover" src="/img/artikel/artikel2.jpg" alt="Artikel 1">
+                        <div class="article-text p-5">
+                            <h1 class="text-xl mb-3">Ini Adalah Judul Dari Artikel Kedua Beserta Perubahannya</h1>
+                            <p class="text-sm mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut dolor massa. In quis magna ac est sodales tempus sed.</p>
+                            <p class="text-sm">9 November 2025</p>
+                        </div>
+                    </a>
+                    <a href="/artikel/artikel-1/" class="article-card">
+                        <img class="w-full max-h-50 object-cover" src="/img/artikel/artikel3.jpg" alt="Artikel 1">
+                        <div class="article-text p-5">
+                            <h1 class="text-xl mb-3">Ini Adalah Judul Dari Artikel Ketiga Beserta Perubahannya</h1>
+                            <p class="text-sm mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut dolor massa. In quis magna ac est sodales tempus sed.</p>
+                            <p class="text-sm">9 November 2025</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <!-- artikel terkini end -->
+        </section>
+    </main>
+    <!-- main section end 🐧-->
+
+    <div id="footer"></div>
+
+    <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+        });
+
+        document.addEventListener('aos:in', ({ detail }) => {
+            setTimeout(() => {
+                detail.removeAttribute('data-aos');
+                detail.removeAttribute('data-aos-duration');
+                detail.classList.remove('aos-animate');
+            }, 1100); // sedikit lebih lama dari durasi animasi
+        });
+    </script>
+</body>
+
+</html>
