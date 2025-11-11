@@ -22,6 +22,8 @@ cd AturUang
 2. Install dependensi front-end
 ```bash
 npm install
+[npm run dev
+npx serve public] secara bersamaan jika untuk development
 ```
 3. Buka projek di code editor (contoh: Visual Studio Code)
 ```bash
