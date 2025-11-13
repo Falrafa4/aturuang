@@ -347,21 +347,6 @@
   .max-h-70 {
     max-height: calc(var(--spacing) * 70);
   }
-  .max-h-100 {
-    max-height: calc(var(--spacing) * 100);
-  }
-  .max-h-150 {
-    max-height: calc(var(--spacing) * 150);
-  }
-  .min-h-10 {
-    min-height: calc(var(--spacing) * 10);
-  }
-  .min-h-15 {
-    min-height: calc(var(--spacing) * 15);
-  }
-  .min-h-150 {
-    min-height: calc(var(--spacing) * 150);
-  }
   .min-h-\[70\%\] {
     min-height: 70%;
   }
@@ -379,6 +364,9 @@
   }
   .w-\[260px\] {
     width: 260px;
+  }
+  .w-fit {
+    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -419,6 +407,27 @@
   }
   .resize {
     resize: both;
+  }
+  .scroll-mt-5 {
+    scroll-margin-top: calc(var(--spacing) * 5);
+  }
+  .scroll-mt-15 {
+    scroll-margin-top: calc(var(--spacing) * 15);
+  }
+  .scroll-mt-25 {
+    scroll-margin-top: calc(var(--spacing) * 25);
+  }
+  .scroll-mt-40 {
+    scroll-margin-top: calc(var(--spacing) * 40);
+  }
+  .scroll-mt-50 {
+    scroll-margin-top: calc(var(--spacing) * 50);
+  }
+  .scroll-mt-80 {
+    scroll-margin-top: calc(var(--spacing) * 80);
+  }
+  .scroll-mt-100 {
+    scroll-margin-top: calc(var(--spacing) * 100);
   }
   .list-disc {
     list-style-type: disc;
@@ -954,11 +963,6 @@
       max-height: calc(var(--spacing) * 80);
     }
   }
-  .lg\:max-h-100 {
-    @media (width >= 64rem) {
-      max-height: calc(var(--spacing) * 100);
-    }
-  }
   .lg\:max-h-\[20\%\] {
     @media (width >= 64rem) {
       max-height: 20%;
@@ -1348,8 +1352,8 @@ p {
   margin-top: calc(var(--spacing) * 6);
   display: flex;
   cursor: pointer;
-  align-content: center;
   align-items: center;
+  justify-content: center;
   border-radius: calc(infinity * 1px);
   border-style: var(--tw-border-style);
   border-width: 1px;
