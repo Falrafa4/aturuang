@@ -25,16 +25,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
-
-    <style>
-        ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
-            appearance: none;
-        }
-
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
 </head>
 
 <body class="font-default font-light text-primary bg-secondary w-full no-scrollbar">
@@ -46,7 +36,7 @@
     <main>
         <section class="font-default w-full flex items-center justify-center gap-4 py-20 lg:py-30 bg-secondary">
             <div x-data="{tab: 'pembagianKeuangan'}"
-                class="w-[80%] min-h-[70%] lg:w-[60%] lg:min-h-[50%] 2xl:min-w-0 items-center lg:items-stretch p-8 lg:p-17 gap-4 flex flex-col bg-white rounded-2xl mx-auto">
+                class="w-[90%] min-h-[70%] lg:w-[60%] lg:min-h-[50%] 2xl:min-w-0 items-center lg:items-stretch p-8 lg:p-17 gap-4 flex flex-col bg-white rounded-2xl mx-auto">
                 <div class="flex w-full h-full flex-col gap-4 items-center lg:items-start">
                     <h1
                         class="text-primary text-center mb-5 lg:text-start text-4xl lg:text-[2.5rem] font-default font-semibold">
@@ -64,7 +54,7 @@
                     </div>
                     <!-- tab end -->
                 </div>
-                <div class="mt-5">
+                <div class="mt-5 w-full">
                     <!-- pembagian keuangan -->
                     <div class="flex flex-col lg:text-start" x-show="tab === 'pembagianKeuangan'">
                         <div class="flex flex-col w-full h-full items-center lg:items-start">
@@ -102,9 +92,9 @@
                     <!-- perbandingan keuangan end -->
 
                     <!-- perbandingan pengeluaran -->
-                    <div class="flex flex-col lg:flex-row justify-between" x-show="tab === 'perbandinganPengeluaran'">
+                    <div class="flex flex-col justify-between" x-show="tab === 'perbandinganPengeluaran'">
                         <!-- input -->
-                        <div class="flex flex-col gap-5 w-full lg:w-[50%]"> 
+                        <div class="flex flex-col gap-5 w-full"> 
                             <div class="flex flex-col gap-2.5 mb-5 lg:gap-[15px]">
                                 <h1 class="font-bold-custom">Total Anggaran Bulanan</h1>
                                 <div class="relative font-normal">
@@ -140,13 +130,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex">
-                                <button id="submit" class="btn-primary-hp text-sm lg:text-base mt-5 sm:w-full lg:w-fit lg:btn-primary font-normal">Analisis Perbandingan</button>
-                            </div>
+                            <button id="submit" class="btn-primary-hp text-sm lg:text-base mt-5 sm:w-full lg:w-fit lg:btn-primary font-normal">Analisis Perbandingan</button>
                         </div>
                         <!-- chart 🐧 -->
-                        <div class="flex flex-col w-full lg:w-[45%]">
-                            <canvas id="chartOutput" class="w-full max-h-70 lg:max-h-80 mt-10 lg:mt-5"></canvas>
+                        <div class="flex flex-col w-full">
+                            <canvas id="chartOutput" class="w-full max-h-70 lg:max-h-80 mt-20 lg:mt-5 hidden"></canvas>
                             <!-- Rekomendasi Aksi -->
                             <div id="parentHasil" class="mt-5 hidden">
                                 <h1 class="font-bold">Rekomendasi Aksi</h1>
@@ -250,7 +238,7 @@
 
         }
 
-        generateChart([0, 0, 0], [0, 0, 0]);
+        // generateChart([0, 0, 0], [0, 0, 0]);
 
         // Perbandingan Pengeluaran
         $('#submit').on('click', function () {
@@ -263,7 +251,7 @@
 
             if ((dataKebutuhanPokok == 0 || isNaN(dataKebutuhanPokok)) && (dataKeinginan == 0 || isNaN(dataKeinginan)) && (dataTabunganAtauInvestasi == 0 || isNaN(dataTabunganAtauInvestasi))) {
                 alert('Harap diisi terlebih dahulu dan jangan ada karakter yang selain angka');
-                generateChart([0, 0, 0], [0, 0, 0]);
+                //generateChart([0, 0, 0], [0, 0, 0]);
                 return;
             }
 
@@ -320,6 +308,7 @@
                 hasil.unshift("<p>🎯 Semua pengeluaran sudah ideal, pertahankan!</p>");
             }
 
+            $('#chartOutput').removeClass('hidden').addClass('block');
             $('#parentHasil').removeClass('hidden').addClass('block')
             $('#hasil').html(hasil.join('') + '</ul>');
         })

@@ -8,6 +8,15 @@
   --breakpoint-4xl: 2560px;
 }
 
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   @apply box-border;
 }
@@ -51,6 +60,14 @@ p {
 
 .btn-primary-alternate {
   @apply bg-transparent text-primary px-15 py-4 flex items-center content-center border border-primary rounded-full w-fit mt-6 hover:bg-primary hover:text-white hover:border hover:border-primary transition-all duration-300 cursor-pointer ease-in-out;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-primary px-10 py-3 flex items-center gap-3 justify-center border border-secondary rounded-full mt-6 hover:bg-transparent hover:text-secondary hover:border hover:border-secondary hover:fill-secondary transition-all duration-300 cursor-pointer ease-in-out;
+}
+
+.custom-shadow {
+  box-shadow: 0px 0px 100px -20px rgba(0, 0, 0, 0.25);
 }
 
 .mission ul li {
