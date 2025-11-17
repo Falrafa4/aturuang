@@ -74,14 +74,10 @@ p {
   @apply leading-[180%];
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+.tab-active {
+  @apply bg-secondary text-primary rounded-full;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+.tab-hidden {
+  @apply opacity-0 pointer-events-none h-0;
 }
